@@ -1,0 +1,186 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #0A0D15;
+  color: white;
+}
+.blob1 {
+  position: absolute;
+  top: -12rem;
+  right: -6rem;
+  width: 20rem;
+  margin: 0;
+  padding: 0;
+  animation: blobdrop 1.5s forwards ease-in-out;
+}
+@keyframes blobdrop {
+  0%{
+    opacity: 0;
+    top: -14rem;
+    right: -8rem;
+  }
+  100%{
+    opacity: 1;
+    top: -12rem;
+    right: -6rem;
+  }
+}
+.blob2 {
+  position: absolute;
+  bottom: -12rem;
+  width: 20rem;
+  left: -5rem;
+  transform: rotate(10deg) scaleY(-1);
+  animation: blobrise 1.5s forwards ease-in-out;
+}
+@keyframes blobrise {
+  0%{
+    opacity: 0;
+    bottom: -14rem;
+    left: -7rem;
+  }
+  100%{
+    opacity: 1;
+    bottom: -12rem;
+    left: -5rem;
+  }
+}
+.content .logo {
+  position: relative;
+  top: -10rem;
+  margin: 7rem auto 0 auto;
+  filter: drop-shadow(0 0 7rem #00ffff);
+}
+.content section {
+  margin: 12rem 0;
+  position: relative;
+  animation: drop 2s ease-in-out;
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+    bottom: 1rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.content section h5 {
+  padding: 0 2rem;
+  margin: 1rem 0;
+}
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -38rem;
+  left: 0;
+  animation: reveal 2s ease-in-out;
+  /* align-items: center; */
+}
+.googleLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  border: none;
+  border-radius: 3rem;
+  padding: 0.1rem;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #01161d ;
+  color: whitesmoke;
+  box-shadow: 0 0 1.5rem #00ffffc2;
+  border: solid #00ffff 1px;
+}
+.googleLogin:active {
+  transform: scale(0.95, 0.95);
+  opacity: 0.5;
+  background-color: rgb(44, 44, 44);
+  color: whitesmoke;
+  box-shadow: black 0 0.5rem 1rem;
+}
+.roadAnimationContainer {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roadAnimationContainer .car{
+  position:absolute;
+  z-index: 10000; 
+  transform: translateY(10.7vh);
+  animation: carAnimation 1.5s infinite;
+  filter: drop-shadow(-0.3rem 0rem 0.3rem rgba(255, 255, 255, 0.815));
+}
+@keyframes carAnimation {
+  0%{
+    top: -6.8rem;
+    /* transform: rotate(178deg); */
+  }
+  50%{
+    top: -6.5rem;
+    /* transform: rotate(183deg); */
+  }
+  100%{
+    top:-6.8rem;
+    /* transform: rotate(178deg); */
+  }
+}
+.road {
+  height: 40rem;
+  width: 40rem;
+  position: relative; /* Changed to relative */
+  border-radius: 50%;
+  border: solid #041f35 5rem;
+  box-shadow: 0 0 400rem #84dbdb88;
+  animation: rotation 20s infinite linear;
+}
+
+.roadStripes {
+  height: 44.7rem;
+  width: 44.7rem;
+  position: relative; /* Changed to absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: dashed white 0.3rem;
+  z-index: -1000;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg); /* Rotation only */
+  }
+  100% {
+    transform: rotate(-360deg); /* Complete rotation */
+  }
+}
+
+.roadAnimationContainer {
+  top: 60rem;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  animation: reveal 2s ease-in-out;
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
